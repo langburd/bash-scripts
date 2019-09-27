@@ -1,9 +1,9 @@
 #!/bin/bash
 
-git_dir=/c/Git/langburd
+git_dir=`pwd`
 repo_base_url=git@github.com:langburd
 repos_list=$(cat `pwd`/list.txt)
-desired_remote_branch=develop
+remote_branch=newbranch
 
 mkdir -p $git_dir
 function git_function() {
@@ -12,13 +12,15 @@ function git_function() {
     remote_branches=$(git branch -r | cut -c10- | grep -v HEAD)
     for i in "${remote_branches[@]}"; do
         repo_url=$(git config --get remote.origin.url)
-        if git ls-remote --quiet --exit-code --heads $repo_url $desired_remote_branch >/dev/null; then
-            # git branch -D origin/$desired_remote_branch 2>/dev/null
-            git checkout -b $desired_remote_branch --track origin/$desired_remote_branch 2>/dev/null
+        if git ls-remote --quiet --exit-code --heads $repo_url $remote_branch >/dev/null; then
+            echo Remote branch \'$remote_branch\' exists, checking out to it
+            # git branch -D origin/$remote_branch 2>/dev/null
+            git checkout -b $remote_branch --track origin/$remote_branch 2>/dev/null
             # git branch -D master 2>/dev/null
         else
             git checkout -b master --track origin/master 2>/dev/null
-            # git branch -D $desired_remote_branch 2>/dev/null
+            echo Remote branch \'$remote_branch\' not exists, checking out to branch master
+            # git branch -D $remote_branch 2>/dev/null
         fi
     done
 }
