@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+## Script for merging different K8S clusters configuration into the one config file.
+
 # Inspired by https://ahmet.im/blog/mastering-kubeconfig/
 
 # Put config file of the new cluster to your $HOME/.kube/ directory with ".config" extension:
 # Like "newcluster.config"
-# Then run this script. It will backup your existing config and will merge the new one into the single file.
+# Then run this script from the '$HOME/.kube/' directory.
+# It will backup your existing config and will merge the new one into the single '$HOME/.kube/config' file.
 
 # Then use "https://github.com/ahmetb/kubectx" to switch between contexts.
 
@@ -16,7 +19,7 @@ DATE=$(date +%Y-%m-%d_%H-%M-%S)
 # Rename the existing config with the .config extension
 mv "$HOME/.kube/config" "$HOME/.kube/$DATE.config"
 
-# Get List of all .config files
+# Get list of all .config files
 echo The following files will be merged:
 while IFS= read -r -d '' config_file
 do
