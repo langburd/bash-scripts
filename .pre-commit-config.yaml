@@ -13,6 +13,8 @@ repos:
       - id: check-ast
       - id: check-builtin-literals
       - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
       - id: check-yaml
       - id: end-of-file-fixer
       - id: fix-byte-order-marker

@@ -158,6 +158,7 @@ if [[ ${OSTYPE} == darwin* ]]; then
         echo "The GNU version of 'bash' is not found, please install the latest version"
         echo "with Homebrew packet manager - https://formulae.brew.sh/formula/bash. Run:"
         echo "$ brew install bash"
+        echo "$ sudo ln -s /opt/homebrew/bin/bash /usr/local/bin/bash"
         echo "$ echo '/usr/local/bin/bash' | sudo tee -a /etc/shells"
         echo ==================================================================================
     else
