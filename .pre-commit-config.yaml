@@ -29,7 +29,8 @@ repos:
     rev: 3.0.0
     hooks:
       - id: shellcheck
-      # - id: shfmt
+      - id: shfmt
+        args: ["--indent", "4"]
 
   # Markdown tools
   - repo: https://github.com/igorshubovych/markdownlint-cli

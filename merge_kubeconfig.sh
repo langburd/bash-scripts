@@ -22,8 +22,8 @@ mv "${HOME}/.kube/config" "${HOME}/.kube/${DATE}.config"
 # Get list of all .config files
 echo The following files will be merged:
 while IFS= read -r -d '' config_file; do
-  OUT=${OUT:+${OUT}:}${config_file}
-  echo "${config_file}"
+    OUT=${OUT:+${OUT}:}${config_file}
+    echo "${config_file}"
 done < <(find "${HOME}/.kube" -not -path "*/\.git*" -name "*config" -print0 || true)
 
 # Merge all configurations into one file
@@ -35,7 +35,7 @@ mv "${HOME}/.kube/${DATE}.config" "${HOME}/.kube/done/${DATE}.config.bak"
 
 # Move all imported configurations to the ./done folder
 while IFS= read -r -d '' imported_config_file; do
-  mv "${imported_config_file}" "${HOME}/.kube/done/$(basename -- "${imported_config_file}").imported"
+    mv "${imported_config_file}" "${HOME}/.kube/done/$(basename -- "${imported_config_file}").imported"
 done < <(find "${HOME}/.kube/" -name "*.config" -print0 || true)
 
 # Restore $KUBECONFIG environment variable
