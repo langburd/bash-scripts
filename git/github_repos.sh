@@ -5,17 +5,17 @@
 # Usage:
 # - Configure path to the cloned repos in 'git_dir' variable.
 # - Set variable 'repo_base_url' with URL of your username (GitHub) or some project (GitLab) - the 'base URL' that contains all repos.
-# - Put list of names of repos in 'list.txt' or define path to your file with names in the 'repos_list' variable.
 # - If the default branch that is used in your organization is not 'master' define the variable 'default_branch'.
 # - Run the script.
 
+git_dir="$(pwd)/git_repositories"
 gh_org=langburd
 repo_base_url=git@github.com:${gh_org}
 repos_list=$(gh repo list "${gh_org}" -L 1000 --json name --jq '.[].name')
 default_branch=master
 
 function git_function() {
-    git fetch --all
+    git fetch --all --tags --prune
     repo_url=$(git config --get remote.origin.url)
     if git ls-remote --quiet --exit-code --heads "${repo_url}" "${default_branch}" >/dev/null; then
         echo Remote branch \'"${default_branch}"\' exists, checking out to it
@@ -30,7 +30,6 @@ function git_function() {
     echo
 }
 
-git_dir="$(pwd)/git_repositories"
 mkdir -p "${git_dir}"
 
 for repo in ${repos_list}; do
