@@ -3,7 +3,7 @@
 
 # Set computer name - inspired by https://rafi.io/operating-systems/linux/shell/bash/pimp-up-your-shell/
 hostname
-export COMPUTER_NAME="avi-a2992-macmend"
+export COMPUTER_NAME="avi-a2992-mac"
 sudo scutil --set ComputerName "${COMPUTER_NAME}"
 sudo scutil --set HostName "${COMPUTER_NAME}"
 sudo scutil --set LocalHostName "${COMPUTER_NAME}"
