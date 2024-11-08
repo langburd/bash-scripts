@@ -3,7 +3,7 @@
 
 # Set computer name - inspired by https://rafi.io/operating-systems/linux/shell/bash/pimp-up-your-shell/
 hostname
-export COMPUTER_NAME="avi-a1989"
+export COMPUTER_NAME="MacAxV"
 sudo scutil --set ComputerName "${COMPUTER_NAME}"
 sudo scutil --set HostName "${COMPUTER_NAME}"
 sudo scutil --set LocalHostName "${COMPUTER_NAME}"
@@ -20,6 +20,31 @@ hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x70
 # Install oh-my-zsh now
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh || true)"
+
+# Install applications from Homebrew Cask
+brew install --cask \
+    adobe-acrobat-reader \
+    docker \
+    firefox \
+    google-chrome \
+    google-drive \
+    iterm2 \
+    keepassxc \
+    keybase \
+    marked \
+    mysqlworkbench \
+    rectangle \
+    remote-desktop-manager \
+    slack \
+    sourcetree \
+    spotify \
+    telegram \
+    visual-studio-code \
+    whatsapp \
+    zoom
+
 # Clone ~/.ssh repository
 mv ~/.ssh ~/.ssh.bak
 git clone keybase://private/langburd/ssh ~/.ssh
@@ -32,9 +57,6 @@ ln -s ~/.ssh/.p10k.zsh ~/.p10k.zsh
 # Clone ~/.kube repository
 mv ~/.kube ~/.kube.bak
 git clone keybase://private/langburd/kubeconfig ~/.kube
-
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh || true)"
 
 # Install Homebrew packages
 brew install argocd    # Declarative GitOps continuous delivery tool for Kubernetes
@@ -51,6 +73,7 @@ brew install ctop      # Command-line monitoring tool for containers
 brew install curl      # Tool to transfer data from or to a server
 brew install dive      # Tool to analyze Docker images and reduce their size
 # brew install docker # Platform for developing, shipping, and running containers
+brew install font-meslo-for-powerlevel10k               # Customized Meslo Nerd Font patched for Powerlevel10k
 brew install fzf                                        # General-purpose command-line fuzzy finder
 brew install gawk                                       # GNU implementation of the AWK programming language
 brew install gh                                         # GitHub command-line tool
@@ -97,6 +120,8 @@ brew install powerlevel10k                              # Zsh theme with a confi
 brew install pre-commit                                 # Framework for managing multi-language pre-commit hooks
 brew install progress                                   # Tool to show progress of coreutils commands
 brew install pstree                                     # Tool to display running processes as a tree
+brew install pyenv                                      # Python version management tool
+brew install pylint                                     # Source code analyzer for Python code
 brew install rclone                                     # Command-line program to manage cloud storage files
 brew install readline                                   # Library for command-line editing
 brew install ripgrep                                    # Line-oriented search tool to search directories for regex patterns
@@ -185,27 +210,6 @@ mas install 1475387142 # Tailscale
 mas install 1295203466 # Microsoft Remote Desktop
 mas install 1187772509 # stts (2.21)
 
-# Install applications from Homebrew Cask
-brew install --cask \
-    adobe-acrobat-reader \
-    docker \
-    firefox \
-    google-chrome \
-    google-drive \
-    iterm2 \
-    keepassxc \
-    keybase \
-    marked \
-    mysqlworkbench \
-    remote-desktop-manager \
-    slack \
-    sourcetree \
-    spotify \
-    telegram \
-    visual-studio-code \
-    whatsapp \
-    zoom
-
 # Install kubectl krew and some plugins
 # Run this command to download and install krew:
 (
@@ -240,3 +244,6 @@ gh ssh-key add "${SSH_KEY_PATH}" --type signing
 git config --global gpg.format ssh
 git config --global user.signingkey "${SSH_KEY_PATH}"
 git config --global commit.gpgsign true
+
+# Allow sudo without password, with fingerprint authentication
+sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
