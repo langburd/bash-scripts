@@ -59,103 +59,103 @@ mv ~/.kube ~/.kube.bak
 git clone keybase://private/langburd/kubeconfig ~/.kube
 
 # Install Homebrew packages
-brew install argocd    # Declarative GitOps continuous delivery tool for Kubernetes
-brew install awscli    # Command-line interface for AWS services
-brew install azure-cli # Command-line interface for Microsoft Azure
-brew install bash      # Unix shell and command language
-brew install bat       # Cat clone with syntax highlighting and Git integration
-brew install bc        # Arbitrary-precision calculator language
-# brew install colima && brew services start colima && colima start # Container runtime for macOS, often used as a Docker Desktop replacement
-brew install colordiff # Tool that colorizes diff output
-brew install coreutils # Basic file, shell, and text manipulation utilities from GNU
-brew install cosign    # Tool for signing and verifying container images
-brew install ctop      # Command-line monitoring tool for containers
-brew install curl      # Tool to transfer data from or to a server
-brew install dive      # Tool to analyze Docker images and reduce their size
-# brew install docker # Platform for developing, shipping, and running containers
-brew install font-meslo-for-powerlevel10k               # Customized Meslo Nerd Font patched for Powerlevel10k
-brew install fzf                                        # General-purpose command-line fuzzy finder
-brew install gawk                                       # GNU implementation of the AWK programming language
-brew install gh                                         # GitHub command-line tool
-brew install git                                        # Distributed version control system
-brew install git-cal                                    # Tool to generate a git contribution calendar
-brew install git-extras                                 # Collection of useful git utilities
-brew install git-flow                                   # Extensions to provide high-level operations for Vincent Driessen's branching model
-brew install git-lfs                                    # Extension for managing large files with Git
-brew install gnu-sed                                    # GNU version of the stream editor for text manipulation
-brew install gnupg                                      # Complete and free implementation of OpenPGP for encryption and signing
-brew install gnutls                                     # Secure communications library implementing SSL, TLS, and DTLS protocols
-brew install go                                         # Statically typed, compiled programming language designed by Google
-brew install google-cloud-sdk                           # Tools for managing Google Cloud resources and applications
-brew install helm                                       # Package manager for Kubernetes
-brew install htop                                       # Interactive process viewer for Unix systems
-brew install httpie                                     # User-friendly HTTP client with JSON support
-brew install httpstat                                   # Tool that visualizes curl statistics more readably
-brew install icdiff                                     # Improved colored diff tool with side-by-side view
-brew install iproute2mac                                # IP routing utilities for macOS
-brew install jq                                         # Command-line JSON processor
-brew install jsonnet                                    # Data templating language for defining structured data
-brew install k9s                                        # Terminal UI to interact with Kubernetes clusters
-brew install keychain                                   # Manager for OpenSSH, GPG, and other types of keys
-brew install kubecolor                                  # Tool to colorize kubectl output
-brew install kubectx                                    # Tool to switch between Kubernetes contexts and namespaces
-brew install kubernetes-cli                             # `kubectl` command-line tool for Kubernetes
-brew install kubeseal                                   # Tool to encrypt Kubernetes Secrets into SealedSecrets for safe Git storage
-brew install kustomize                                  # Kubernetes configuration customization tool
-brew install less                                       # Terminal pager to view file contents one screen at a time
-brew install lnav                                       # Log file navigator with a console interface
-brew install mas                                        # Command-line interface for the Mac App Store
-brew install minikube                                   # Tool to run a Kubernetes cluster locally
-brew install ncdu                                       # Disk usage analyzer with an ncurses interface
-brew install neomutt                                    # Version of the `mutt` email client with added features
-brew install netcat                                     # Networking utility for reading/writing to network connections
-brew install nmap                                       # Network scanning tool to discover hosts/services on a network
-brew install node                                       # JavaScript runtime built on Chrome's V8 engine
-brew install p7zip                                      # Port of the 7-Zip file archiver to POSIX systems
-brew install pass                                       # Simple, standard Unix password manager
-brew install peco                                       # Interactive filtering tool
-brew install pgcli                                      # Command-line interface for PostgreSQL with auto-completion
-brew install pidof                                      # Utility to find the process ID of a running program
-brew install powerlevel10k                              # Zsh theme with a configuration wizard
-brew install pre-commit                                 # Framework for managing multi-language pre-commit hooks
-brew install progress                                   # Tool to show progress of coreutils commands
-brew install pstree                                     # Tool to display running processes as a tree
-brew install pyenv                                      # Python version management tool
-brew install pylint                                     # Source code analyzer for Python code
-brew install rclone                                     # Command-line program to manage cloud storage files
-brew install readline                                   # Library for command-line editing
-brew install ripgrep                                    # Line-oriented search tool to search directories for regex patterns
-brew install rsync                                      # Utility for efficient file transfer and synchronization
-brew install shellcheck                                 # Static analysis tool for shell scripts
-brew install shfmt                                      # Shell script formatter
-brew install stern                                      # Tool to tail multiple pods and containers on Kubernetes
-brew install syncthing && brew services start syncthing # Continuous file synchronization program
-brew install tcpdump                                    # Packet analyzer to capture network packets
-brew install tcping                                     # TCP ping tool to check the availability of a remote host
-brew install terraform-docs                             # Utility to generate documentation from Terraform modules
-brew install tflint                                     # Linter for Terraform files
-brew install tfsec                                      # Static analysis tool for securing Terraform code
-brew install the_silver_searcher                        # Fast code-searching tool similar to ack
-brew install tidy-html5                                 # Tool to clean and correct invalid HTML and XML
-brew install tig                                        # Text-mode interface for git, providing a rich interface
-brew install tmux                                       # Terminal multiplexer to manage multiple terminal sessions
-brew install tmux-mem-cpu-load                          # `tmux` plugin to display system performance information
-brew install tmux-xpanes                                # `tmux` plugin to easily create/manage multiple panes
-brew install tree                                       # Command to display directories as trees
-brew install ttyd                                       # Command-line tool to share terminal over the web
-brew install ttygif                                     # Tool to convert terminal recordings into animated GIFs
-brew install ttyrec                                     # Terminal session recorder
-brew install watch                                      # Command to run another command at regular intervals
-brew install wget                                       # Command-line tool to retrieve files from the web
-brew install yamlfmt                                    # Tool to format YAML files
-brew install yamllint                                   # Linter for YAML files
-brew install yarn                                       # Fast, reliable dependency management tool for JavaScript
-brew install yq                                         # Command-line YAML and JSON processor
-brew install z                                          # Tool to quickly jump to frequently used directories
-brew install zsh                                        # Powerful shell designed for interactive use
-brew install zsh-autosuggestions                        # Zsh plugin that suggests commands as you type
-brew install zsh-completions                            # Additional completion definitions for Zsh
-brew install zsh-syntax-highlighting                    # Zsh plugin for syntax highlighting at the command line
+brew install argocd                                               # Declarative GitOps continuous delivery tool for Kubernetes
+brew install awscli                                               # Command-line interface for AWS services
+brew install azure-cli                                            # Command-line interface for Microsoft Azure
+brew install bash                                                 # Unix shell and command language
+brew install bat                                                  # Cat clone with syntax highlighting and Git integration
+brew install bc                                                   # Arbitrary-precision calculator language
+brew install colima && brew services start colima && colima start # Container runtime for macOS, often used as a Docker Desktop replacement
+brew install colordiff                                            # Tool that colorizes diff output
+brew install coreutils                                            # Basic file, shell, and text manipulation utilities from GNU
+brew install cosign                                               # Tool for signing and verifying container images
+brew install ctop                                                 # Command-line monitoring tool for containers
+brew install curl                                                 # Tool to transfer data from or to a server
+brew install dive                                                 # Tool to analyze Docker images and reduce their size
+brew install docker                                               # Platform for developing, shipping, and running containers
+brew install font-meslo-for-powerlevel10k                         # Customized Meslo Nerd Font patched for Powerlevel10k
+brew install fzf                                                  # General-purpose command-line fuzzy finder
+brew install gawk                                                 # GNU implementation of the AWK programming language
+brew install gh                                                   # GitHub command-line tool
+brew install git                                                  # Distributed version control system
+brew install git-cal                                              # Tool to generate a git contribution calendar
+brew install git-extras                                           # Collection of useful git utilities
+brew install git-flow                                             # Extensions to provide high-level operations for Vincent Driessen's branching model
+brew install git-lfs                                              # Extension for managing large files with Git
+brew install gnu-sed                                              # GNU version of the stream editor for text manipulation
+brew install gnupg                                                # Complete and free implementation of OpenPGP for encryption and signing
+brew install gnutls                                               # Secure communications library implementing SSL, TLS, and DTLS protocols
+brew install go                                                   # Statically typed, compiled programming language designed by Google
+brew install google-cloud-sdk                                     # Tools for managing Google Cloud resources and applications
+brew install helm                                                 # Package manager for Kubernetes
+brew install htop                                                 # Interactive process viewer for Unix systems
+brew install httpie                                               # User-friendly HTTP client with JSON support
+brew install httpstat                                             # Tool that visualizes curl statistics more readably
+brew install icdiff                                               # Improved colored diff tool with side-by-side view
+brew install iproute2mac                                          # IP routing utilities for macOS
+brew install jq                                                   # Command-line JSON processor
+brew install jsonnet                                              # Data templating language for defining structured data
+brew install k9s                                                  # Terminal UI to interact with Kubernetes clusters
+brew install keychain                                             # Manager for OpenSSH, GPG, and other types of keys
+brew install kubecolor                                            # Tool to colorize kubectl output
+brew install kubectx                                              # Tool to switch between Kubernetes contexts and namespaces
+brew install kubernetes-cli                                       # `kubectl` command-line tool for Kubernetes
+brew install kubeseal                                             # Tool to encrypt Kubernetes Secrets into SealedSecrets for safe Git storage
+brew install kustomize                                            # Kubernetes configuration customization tool
+brew install less                                                 # Terminal pager to view file contents one screen at a time
+brew install lnav                                                 # Log file navigator with a console interface
+brew install mas                                                  # Command-line interface for the Mac App Store
+brew install minikube                                             # Tool to run a Kubernetes cluster locally
+brew install ncdu                                                 # Disk usage analyzer with an ncurses interface
+brew install neomutt                                              # Version of the `mutt` email client with added features
+brew install netcat                                               # Networking utility for reading/writing to network connections
+brew install nmap                                                 # Network scanning tool to discover hosts/services on a network
+brew install node                                                 # JavaScript runtime built on Chrome's V8 engine
+brew install p7zip                                                # Port of the 7-Zip file archiver to POSIX systems
+brew install pass                                                 # Simple, standard Unix password manager
+brew install peco                                                 # Interactive filtering tool
+brew install pgcli                                                # Command-line interface for PostgreSQL with auto-completion
+brew install pidof                                                # Utility to find the process ID of a running program
+brew install powerlevel10k                                        # Zsh theme with a configuration wizard
+brew install pre-commit                                           # Framework for managing multi-language pre-commit hooks
+brew install progress                                             # Tool to show progress of coreutils commands
+brew install pstree                                               # Tool to display running processes as a tree
+brew install pyenv                                                # Python version management tool
+brew install pylint                                               # Source code analyzer for Python code
+brew install rclone                                               # Command-line program to manage cloud storage files
+brew install readline                                             # Library for command-line editing
+brew install ripgrep                                              # Line-oriented search tool to search directories for regex patterns
+brew install rsync                                                # Utility for efficient file transfer and synchronization
+brew install shellcheck                                           # Static analysis tool for shell scripts
+brew install shfmt                                                # Shell script formatter
+brew install stern                                                # Tool to tail multiple pods and containers on Kubernetes
+brew install syncthing && brew services start syncthing           # Continuous file synchronization program
+brew install tcpdump                                              # Packet analyzer to capture network packets
+brew install tcping                                               # TCP ping tool to check the availability of a remote host
+brew install terraform-docs                                       # Utility to generate documentation from Terraform modules
+brew install tflint                                               # Linter for Terraform files
+brew install tfsec                                                # Static analysis tool for securing Terraform code
+brew install the_silver_searcher                                  # Fast code-searching tool similar to ack
+brew install tidy-html5                                           # Tool to clean and correct invalid HTML and XML
+brew install tig                                                  # Text-mode interface for git, providing a rich interface
+brew install tmux                                                 # Terminal multiplexer to manage multiple terminal sessions
+brew install tmux-mem-cpu-load                                    # `tmux` plugin to display system performance information
+brew install tmux-xpanes                                          # `tmux` plugin to easily create/manage multiple panes
+brew install tree                                                 # Command to display directories as trees
+brew install ttyd                                                 # Command-line tool to share terminal over the web
+brew install ttygif                                               # Tool to convert terminal recordings into animated GIFs
+brew install ttyrec                                               # Terminal session recorder
+brew install watch                                                # Command to run another command at regular intervals
+brew install wget                                                 # Command-line tool to retrieve files from the web
+brew install yamlfmt                                              # Tool to format YAML files
+brew install yamllint                                             # Linter for YAML files
+brew install yarn                                                 # Fast, reliable dependency management tool for JavaScript
+brew install yq                                                   # Command-line YAML and JSON processor
+brew install z                                                    # Tool to quickly jump to frequently used directories
+brew install zsh                                                  # Powerful shell designed for interactive use
+brew install zsh-autosuggestions                                  # Zsh plugin that suggests commands as you type
+brew install zsh-completions                                      # Additional completion definitions for Zsh
+brew install zsh-syntax-highlighting                              # Zsh plugin for syntax highlighting at the command line
 
 # Add Homebrew binaries to PATH
 # echo 'export PATH="/opt/homebrew/opt/bc/bin:${PATH}"' >> ~/.zshrc
