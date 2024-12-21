@@ -17,6 +17,9 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x70000006D}]}'
 # Then, go to System Preferences/Keyboard/Shortcuts/Input Sources, use key 'caps lock' to switch input source.
 
+# Allow sudo without password, with fingerprint authentication
+sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
+
 # Install oh-my-zsh now
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -26,7 +29,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Install applications from Homebrew Cask
 brew install --cask \
     adobe-acrobat-reader \
-    docker \
     firefox \
     google-chrome \
     google-drive \
@@ -44,6 +46,9 @@ brew install --cask \
     visual-studio-code \
     whatsapp \
     zoom
+
+# Install Docker Desktop in case you have a licence
+brew install --cask docker
 
 # Clone ~/.ssh repository
 mv ~/.ssh ~/.ssh.bak
@@ -244,6 +249,3 @@ gh ssh-key add "${SSH_KEY_PATH}" --type signing
 git config --global gpg.format ssh
 git config --global user.signingkey "${SSH_KEY_PATH}"
 git config --global commit.gpgsign true
-
-# Allow sudo without password, with fingerprint authentication
-sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
