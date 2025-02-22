@@ -109,6 +109,7 @@ brew install kubeseal                                             # Tool to encr
 brew install kustomize                                            # Kubernetes configuration customization tool
 brew install less                                                 # Terminal pager to view file contents one screen at a time
 brew install lnav                                                 # Log file navigator with a console interface
+brew install lsd                                                  # Rust ls command with additional file info and color support
 brew install mas                                                  # Command-line interface for the Mac App Store
 brew install minikube                                             # Tool to run a Kubernetes cluster locally
 brew install ncdu                                                 # Disk usage analyzer with an ncurses interface
