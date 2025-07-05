@@ -1,4 +1,7 @@
-""" Clones or updates all private or internal repositories from a GitHub organization. """
+"""
+Clones or updates all private or internal repositories from a GitHub
+organization.
+"""
 
 import os
 import subprocess
@@ -14,7 +17,8 @@ TARGET_DIRECTORY = os.getenv("TARGET_DIRECTORY")
 
 def get_repositories(org):
     """
-    Fetches the list of private or internal repositories from the specified organization.
+    Fetches the list of private or internal repositories from the specified
+    organization.
 
     :param org: GitHub organization name
     :return: List of repository names
@@ -48,7 +52,8 @@ def get_repositories(org):
 
         except requests.exceptions.Timeout:
             print(
-                "Request timed out. Please check your network connection and try again."
+                "Request timed out. Please check your network connection and "
+                "try again."
             )
             break
         except requests.exceptions.RequestException as e:
@@ -64,6 +69,9 @@ def clone_or_pull_repositories(repos):
 
     :param repos: List of repository URLs
     """
+    if TARGET_DIRECTORY is None:
+        raise ValueError("TARGET_DIRECTORY environment variable is not set")
+
     if not os.path.exists(TARGET_DIRECTORY):
         os.makedirs(TARGET_DIRECTORY)
 
