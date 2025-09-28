@@ -1,0 +1,19 @@
+[gitlab]
+# GitLab URL (without https://)
+url = gitlab.com
+# Token will be read from GITLAB_TOKEN environment variable
+# token = your_token_here
+# Namespace to clone from (user or group name)
+# Examples: 'langburd' for user, 'cynerio' for organization/group
+# Leave empty to clone all accessible group projects
+namespace =
+
+[paths]
+# Directory where repositories will be cloned
+clone_dir = ./repos
+
+[performance]
+# Number of parallel workers for cloning
+max_workers = 4
+# Number of projects to fetch per API call
+per_page = 20

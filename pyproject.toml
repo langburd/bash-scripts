@@ -1,0 +1,37 @@
+[tool.black]
+line-length = 100
+target-version = ['py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.pylint.messages_control]
+disable = [
+  "import-error", # Disable import errors for external dependencies
+]
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pylint.design]
+max-args = 8
+max-locals = 20
+max-branches = 15
+max-statements = 60
+
+[tool.isort]
+profile = "black"
+line_length = 100

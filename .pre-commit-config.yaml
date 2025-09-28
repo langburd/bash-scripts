@@ -2,7 +2,7 @@
 repos:
   # Common hooks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       # Git
       - id: check-added-large-files
@@ -43,7 +43,7 @@ repos:
 
   # Python hooks
   - repo: https://github.com/psf/black
-    rev: 25.1.0
+    rev: 25.9.0
     hooks:
       - id: black
         language_version: python3.12
@@ -59,3 +59,14 @@ repos:
     hooks:
       - id: isort
         args: ["--profile", "black", "--filter-files"]
+
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.405
+    hooks:
+      - id: pyright
+
+  - repo: https://github.com/PyCQA/pylint
+    rev: v3.3.8
+    hooks:
+      - id: pylint
+        args: [--fail-under=9.8]
